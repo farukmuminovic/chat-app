@@ -4,34 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI">
+    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Refactored project structure to separate backend from UI">
       <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/nest-cli.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/pnpm-lock.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/app.controller.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/app.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/app.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/common/database/database.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/dto/create-user.input.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/dto/update-user.input.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/entities/user.entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/users.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/users.resolver.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/users.resolver.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/users.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/users.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/test/app.e2e-spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/test/jest-e2e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/tsconfig.build.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/tsconfig.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/chat-ui/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/chat-ui/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/chat-ui/.idea/chat-app.iml" afterDir="false" />
@@ -139,8 +114,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711144826758</updated>
-      <workItem from="1711144827919" duration="2947000" />
+      <workItem from="1711144827919" duration="3271000" />
     </task>
+    <task id="LOCAL-00001" summary="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI">
+      <option name="closed" value="true" />
+      <created>1711150093599</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711150093599</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Refactored project structure to separate backend from UI">
+      <option name="closed" value="true" />
+      <created>1711150348515</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711150348515</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,9 +142,11 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI" />
+    <MESSAGE value="Refactored project structure to separate backend from UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored project structure to separate backend from UI" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
