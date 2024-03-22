@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/nest-cli.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/pnpm-lock.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/app.controller.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/app.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/app.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/common/database/database.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/dto/create-user.input.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/dto/update-user.input.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/entities/user.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/users.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/users.resolver.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/users.resolver.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/users.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/users.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/test/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/test/jest-e2e.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/tsconfig.build.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/.idea/chat-app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/components/Routes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/components/auth/Auth.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/components/auth/LogIn.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/components/auth/SignUp.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/reportWebVitals.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/setupTests.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Routes.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/Auth.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/LogIn.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/SignUp.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chat-backend" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2e3sv6t27Svi820dE8eBbtOPdov" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "/home/faruk/courses-dir/chat-app/chat-app/chat-ui/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="" />
+      <created>1711144826758</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711144826758</updated>
+      <workItem from="1711144827919" duration="2947000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
