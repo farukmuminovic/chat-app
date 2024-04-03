@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Added validation of email and password strength, implemented logging with nestjs-pino">
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/common/database/db-migration.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/migrations/user-email-index.ts" afterDir="false" />
+    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Added database migrations and fixed hashing undefined password in update user method">
+      <change afterPath="$PROJECT_DIR$/chat-ui/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/constants/apollo-client.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/constants/urls.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useCreateUser.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/models/AbstractModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/models/User.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/src/common/database/database.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/common/database/database.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/users.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/auth/SignUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/auth/SignUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +26,7 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chat-backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -71,7 +75,7 @@
       <workItem from="1711144827919" duration="3392000" />
       <workItem from="1711150492687" duration="55000" />
       <workItem from="1712088242054" duration="4535000" />
-      <workItem from="1712179287071" duration="2548000" />
+      <workItem from="1712179287071" duration="3965000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI">
       <option name="closed" value="true" />
@@ -113,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712180537636</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added database migrations and fixed hashing undefined password in update user method">
+      <option name="closed" value="true" />
+      <created>1712181976118</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712181976118</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,7 +142,8 @@
     <MESSAGE value="IDEA workspace" />
     <MESSAGE value="Implemented abstract repository and entity as well as CRUD functionalities for User object" />
     <MESSAGE value="Added validation of email and password strength, implemented logging with nestjs-pino" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added validation of email and password strength, implemented logging with nestjs-pino" />
+    <MESSAGE value="Added database migrations and fixed hashing undefined password in update user method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added database migrations and fixed hashing undefined password in update user method" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
