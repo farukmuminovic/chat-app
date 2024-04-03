@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Implemented abstract repository and entity as well as CRUD functionalities for User object">
+    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Added validation of email and password strength, implemented logging with nestjs-pino">
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/common/database/db-migration.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/migrations/user-email-index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-backend/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/src/users/dto/create-user.input.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/dto/create-user.input.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/common/database/database.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/common/database/database.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/users.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
       <workItem from="1711144827919" duration="3392000" />
       <workItem from="1711150492687" duration="55000" />
       <workItem from="1712088242054" duration="4535000" />
-      <workItem from="1712179287071" duration="1199000" />
+      <workItem from="1712179287071" duration="2548000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI">
       <option name="closed" value="true" />
@@ -104,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712093757127</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added validation of email and password strength, implemented logging with nestjs-pino">
+      <option name="closed" value="true" />
+      <created>1712180537636</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712180537636</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,7 +129,8 @@
     <MESSAGE value="Refactored project structure to separate backend from UI" />
     <MESSAGE value="IDEA workspace" />
     <MESSAGE value="Implemented abstract repository and entity as well as CRUD functionalities for User object" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented abstract repository and entity as well as CRUD functionalities for User object" />
+    <MESSAGE value="Added validation of email and password strength, implemented logging with nestjs-pino" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added validation of email and password strength, implemented logging with nestjs-pino" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
