@@ -5,17 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Added database migrations and fixed hashing undefined password in update user method">
-      <change afterPath="$PROJECT_DIR$/chat-ui/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/constants/apollo-client.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/constants/urls.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useCreateUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/models/AbstractModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/models/User.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/auth.controller.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/auth.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/auth.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/auth.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/auth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/current-user.decorator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/guards/local-auth.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/strategies/local.strategy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/token-payload.interface.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/auth/SignUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/auth/SignUp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/users/users.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/users.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/users.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +30,7 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chat-backend" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -76,6 +80,7 @@
       <workItem from="1711150492687" duration="55000" />
       <workItem from="1712088242054" duration="4535000" />
       <workItem from="1712179287071" duration="3965000" />
+      <workItem from="1712261175642" duration="3600000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI">
       <option name="closed" value="true" />
