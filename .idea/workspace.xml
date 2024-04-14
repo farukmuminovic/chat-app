@@ -4,22 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Added database migrations and fixed hashing undefined password in update user method">
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/auth.controller.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/auth.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/auth.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/auth.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/auth.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/current-user.decorator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/guards/local-auth.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/strategies/local.strategy.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/token-payload.interface.ts" afterDir="false" />
+    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Added passport and local strategy, JWT functionality&#10;&#10;TODO: JWT Strategy and apply GQL Auth Guard">
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/guards/gql-auth.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/guards/jwt-auth.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/auth/strategies/jwt.strategy.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-backend/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/src/users/users.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/users.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/users.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/auth/auth.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/auth/current-user.decorator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/auth/current-user.decorator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/users/dto/update-user.input.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/dto/update-user.input.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/users/users.resolver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/users.resolver.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +64,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -80,7 +84,9 @@
       <workItem from="1711150492687" duration="55000" />
       <workItem from="1712088242054" duration="4535000" />
       <workItem from="1712179287071" duration="3965000" />
-      <workItem from="1712261175642" duration="3600000" />
+      <workItem from="1712261175642" duration="3794000" />
+      <workItem from="1712266352138" duration="629000" />
+      <workItem from="1713089751165" duration="2947000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI">
       <option name="closed" value="true" />
@@ -130,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712181976118</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added passport and local strategy, JWT functionality&#10;&#10;TODO: JWT Strategy and apply GQL Auth Guard">
+      <option name="closed" value="true" />
+      <created>1712266148887</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712266148887</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +162,8 @@
     <MESSAGE value="Implemented abstract repository and entity as well as CRUD functionalities for User object" />
     <MESSAGE value="Added validation of email and password strength, implemented logging with nestjs-pino" />
     <MESSAGE value="Added database migrations and fixed hashing undefined password in update user method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added database migrations and fixed hashing undefined password in update user method" />
+    <MESSAGE value="Added passport and local strategy, JWT functionality&#10;&#10;TODO: JWT Strategy and apply GQL Auth Guard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added passport and local strategy, JWT functionality&#10;&#10;TODO: JWT Strategy and apply GQL Auth Guard" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
