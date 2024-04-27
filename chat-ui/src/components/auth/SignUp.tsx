@@ -5,6 +5,7 @@ import {useCreateUser} from "../../hooks/useCreateUser";
 import {useState} from "react";
 import {extractErrorMessage} from "../../utils/errors";
 import {useLogin} from "../../hooks/useLogin";
+import {UNKNOWN_ERROR_MESSAGE} from "../../constants/error";
 
 const SignUp = () => {
     const [createUser] = useCreateUser();
@@ -30,7 +31,7 @@ const SignUp = () => {
                     setError(errorMessage);
                     return;
                 }
-                setError("Unknown error occurred.")
+                setError(UNKNOWN_ERROR_MESSAGE)
             }
         }}>
             <Link to={"/login"} style={{alignSelf: "center"}}>
