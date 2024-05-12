@@ -1,16 +1,16 @@
-import {API_URL} from "../constants/urls";
+import { API_URL } from "../constants/urls";
 
 const useLogout = () => {
-    const logout = async () => {
-        const res = await fetch(`${API_URL}/auth/logout`, {
-            method: "POST",
-        });
-        if (!res.ok) {
-            throw new Error("Error occurred while logging you out.")
-        }
-    };
+  const logout = async () => {
+    const res = await fetch(`${API_URL}/auth/logout`, {
+      method: "POST",
+    });
+    if (!res.ok) {
+      throw new Error("Error logging out.");
+    }
+  };
 
-    return {logout};
+  return { logout };
 };
 
-export {useLogout};
+export { useLogout };

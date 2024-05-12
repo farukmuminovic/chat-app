@@ -4,13 +4,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Debugging apollo-client">
+    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Added: chat list component">
       <change afterPath="$PROJECT_DIR$/chat-ui/pnpm-lock.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/ChatList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-header/ChatListHeader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-item/ChatListItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/components/auth/Login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/components/auth/Signup.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/components/home/Home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/constants/errors.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/assets/images/fet-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/Home.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/Routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/Routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/auth/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/auth/Auth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/auth/Guard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/auth/Guard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/auth/LogIn.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/auth/SignUp.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/ChatList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/ChatList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-header/ChatListHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-header/ChatListHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-item/ChatListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-item/ChatListItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/header/Branding.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/header/Branding.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/header/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/header/Navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/header/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/header/Settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/header/mobile/MobileBranding.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/header/mobile/MobileBranding.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/header/mobile/MobileNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/header/mobile/MobileNavigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/snackbar/Snackbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/snackbar/Snackbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/constants/apollo-client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/constants/apollo-client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/constants/authenticated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/constants/authenticated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/constants/error.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/constants/excluded-routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/constants/excluded-routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/constants/snack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/constants/snack.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/constants/urls.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/constants/urls.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/hooks/useCreateUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useCreateUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/hooks/useGetMe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useGetMe.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/hooks/useLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useLogin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/hooks/useLogout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useLogout.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/interfaces/page.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/interfaces/page.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/interfaces/snack-message.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/interfaces/snack-message.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/models/AbstractModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/models/AbstractModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/models/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/reportWebVitals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/setupTests.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/utils/errors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/utils/errors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/utils/logout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/utils/logout.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,30 +87,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/faruk/courses-dir/course-app/ui&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettier.import.notification.dismissed&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/faruk/courses-dir/chat-app/chat-app/chat-ui/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/faruk/courses-dir/chat-app/chat-app/chat-ui",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettier.import.notification.dismissed": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "/home/faruk/courses-dir/chat-app/chat-app/chat-backend/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/chat-ui" />
       <recent name="$PROJECT_DIR$/chat-ui/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -100,7 +144,7 @@
       <workItem from="1712266352138" duration="629000" />
       <workItem from="1713089751165" duration="3654000" />
       <workItem from="1713891536646" duration="32505000" />
-      <workItem from="1715533938202" duration="3642000" />
+      <workItem from="1715533938202" duration="4933000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI">
       <option name="closed" value="true" />
@@ -190,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715534153736</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added: chat list component">
+      <option name="closed" value="true" />
+      <created>1715538053159</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715538053159</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +265,8 @@
     <MESSAGE value="Added complete implementation of UI authentication with route guards and redirects after sign up and log in&#10;&#10;TODO: Headers and snackbar" />
     <MESSAGE value="Added header and snackbars for logged in and non-authenticated users" />
     <MESSAGE value="Debugging apollo-client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debugging apollo-client" />
+    <MESSAGE value="Added: chat list component" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added: chat list component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
