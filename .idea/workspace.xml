@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Debugging apollo-client">
+    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Fixed dependencies and resolved apollo client 401 error">
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/hooks/usePath.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/auth/Guard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/auth/Guard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715534153736</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed dependencies and resolved apollo client 401 error">
+      <option name="closed" value="true" />
+      <created>1715540523427</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1715540523427</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +221,8 @@
     <MESSAGE value="Added complete implementation of UI authentication with route guards and redirects after sign up and log in&#10;&#10;TODO: Headers and snackbar" />
     <MESSAGE value="Added header and snackbars for logged in and non-authenticated users" />
     <MESSAGE value="Debugging apollo-client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debugging apollo-client" />
+    <MESSAGE value="Fixed dependencies and resolved apollo client 401 error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed dependencies and resolved apollo client 401 error" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
