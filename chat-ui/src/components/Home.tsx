@@ -1,5 +1,11 @@
+import Box from "@mui/material/Box";
+import customIcon from '../assets/images/background-chat-wallpaper.jpg'
+
 const Home = () => {
-    return <h1>Home</h1>;
+    return (
+        <Box component="img" src={customIcon} alt="FET" sx={{width: '100%', height: '100%'}}>
+        </Box>
+    );
 }
 
 export default Home;
