@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Implemented conditional rendering of chat list">
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-add/ChatListAdd.tsx" afterDir="false" />
+    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Implemented chat backend">
+      <change afterPath="$PROJECT_DIR$/chat-ui/codegen.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/gql/fragment-masking.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/gql/gql.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/gql/graphql.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/gql/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useCreateChat.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/ChatList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/ChatList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-header/ChatListHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-header/ChatListHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-add/ChatListAdd.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-add/ChatListAdd.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/hooks/useCreateUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useCreateUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/hooks/useGetMe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useGetMe.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +109,7 @@
       <workItem from="1713089751165" duration="3654000" />
       <workItem from="1713891536646" duration="32505000" />
       <workItem from="1715533938202" duration="3642000" />
-      <workItem from="1716833264866" duration="657000" />
+      <workItem from="1716833264866" duration="4028000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI">
       <option name="closed" value="true" />
@@ -207,7 +215,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715541625345</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Implemented chat modal">
+      <option name="closed" value="true" />
+      <created>1716834099711</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1716834099711</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Implemented chat backend">
+      <option name="closed" value="true" />
+      <created>1716835395624</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1716835395624</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +256,9 @@
     <MESSAGE value="Debugging apollo-client" />
     <MESSAGE value="Fixed dependencies and resolved apollo client 401 error" />
     <MESSAGE value="Implemented conditional rendering of chat list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented conditional rendering of chat list" />
+    <MESSAGE value="Implemented chat modal" />
+    <MESSAGE value="Implemented chat backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented chat backend" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
