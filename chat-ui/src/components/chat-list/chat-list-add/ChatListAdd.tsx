@@ -34,6 +34,23 @@ const ChatListAdd = ({open, handleClose}: ChatListAddProps) => {
         setIsPrivate(false);
         handleClose();
     }
+
+    const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevents the default action of adding a new line
+            try {
+                await createChat({
+                    variables: {
+                        createChatInput: {isPrivate, name},
+                    },
+                });
+                onClose();
+            } catch (err) {
+                setError(UNKNOWN_ERROR_MESSAGE)
+            }
+        }
+    };
+
     return (
         <Modal open={open} onClose={onClose}>
             <Box
@@ -79,6 +96,7 @@ const ChatListAdd = ({open, handleClose}: ChatListAddProps) => {
                             error={!!error}
                             helperText={error}
                             onChange={(event) => setName(event.target.value)}
+                            onKeyDown={handleKeyDown}
                         />
                     )}
                     <Button
