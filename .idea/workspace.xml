@@ -4,27 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Added: messages UI template&#10;&#10;// TODO: message backend and getting messages">
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/chats/messages/dto/create-message.input.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/chats/messages/dto/get-messages.args.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/chats/messages/entities/message.entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/chats/messages/messages.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/chats/messages/messages.resolver.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/chats/messages/messages.resolver.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/chats/messages/messages.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/chats/messages/messages.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/fragments/message.fragment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useCreateMessage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useGetMessages.ts" afterDir="false" />
+    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Added: message backend and UI, creating and retrieving the messages of a chat, sending message and creating chat on Return key pressed">
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/assets/images/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/src/chats/chats.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/chats/chats.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/src/chats/chats.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/chats/chats.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/src/chats/entities/chat.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/chats/entities/chat.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/components/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/auth/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/auth/Auth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/ChatList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/ChatList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-add/ChatListAdd.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-add/ChatListAdd.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-header/ChatListHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-header/ChatListHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-item/ChatListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-item/ChatListItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat/Chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat/Chat.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/header/Branding.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/header/Branding.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/gql/gql.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/gql/gql.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/src/gql/graphql.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/gql/graphql.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/hooks/useCreateMessage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useCreateMessage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/hooks/useGetMessages.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useGetMessages.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +35,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_COMMON_BRANCH" value="debug" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chat-backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -119,7 +113,7 @@
       <workItem from="1713891536646" duration="32505000" />
       <workItem from="1715533938202" duration="3642000" />
       <workItem from="1716833264866" duration="10535000" />
-      <workItem from="1716921756030" duration="3897000" />
+      <workItem from="1716921756030" duration="11759000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI">
       <option name="closed" value="true" />
@@ -265,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716845525115</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added: message backend and UI, creating and retrieving the messages of a chat, sending message and creating chat on Return key pressed">
+      <option name="closed" value="true" />
+      <created>1716925839376</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1716925839376</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +297,8 @@
     <MESSAGE value="Added: GraphQL type generation and concurrent watching of file type changes and UI functionality for creating new chat" />
     <MESSAGE value="Added: get chat functionality and updating cache when adding new chat" />
     <MESSAGE value="Added: messages UI template&#10;&#10;// TODO: message backend and getting messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added: messages UI template&#10;&#10;// TODO: message backend and getting messages" />
+    <MESSAGE value="Added: message backend and UI, creating and retrieving the messages of a chat, sending message and creating chat on Return key pressed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added: message backend and UI, creating and retrieving the messages of a chat, sending message and creating chat on Return key pressed" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -16,6 +16,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import {useState} from "react";
 import {useCreateChat} from "../../../hooks/useCreateChat";
 import {UNKNOWN_ERROR_MESSAGE} from "../../../constants/error";
+import router from "../../Routes";
 
 interface ChatListAddProps {
     open: boolean;
@@ -34,22 +35,23 @@ const ChatListAdd = ({open, handleClose}: ChatListAddProps) => {
         setIsPrivate(false);
         handleClose();
     }
-
-    const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-        if (event.key === 'Enter') {
-            event.preventDefault(); // Prevents the default action of adding a new line
-            try {
-                await createChat({
-                    variables: {
-                        createChatInput: {isPrivate, name},
-                    },
-                });
-                onClose();
-            } catch (err) {
-                setError(UNKNOWN_ERROR_MESSAGE)
-            }
+    const handleCreateChat = async () => {
+        if (!name.length) {
+            setError("Please enter a chat name!");
+            return;
         }
-    };
+        try {
+            const chat = await createChat({
+                variables: {
+                    createChatInput: {isPrivate, name},
+                },
+            });
+            onClose();
+            await router.navigate(`/chats/${chat.data?.createChat._id}`)
+        } catch (err) {
+            setError(UNKNOWN_ERROR_MESSAGE)
+        }
+    }
 
     return (
         <Modal open={open} onClose={onClose}>
@@ -96,27 +98,17 @@ const ChatListAdd = ({open, handleClose}: ChatListAddProps) => {
                             error={!!error}
                             helperText={error}
                             onChange={(event) => setName(event.target.value)}
-                            onKeyDown={handleKeyDown}
+                            onKeyDown={async event => {
+                                if (event.key === 'Enter') {
+                                    event.preventDefault();
+                                    await handleCreateChat();
+                                }
+                            }}
                         />
                     )}
                     <Button
                         variant="outlined"
-                        onClick={async () => {
-                            if (!name.length) {
-                                setError("Please enter a chat name!");
-                                return;
-                            }
-                            try {
-                                await createChat({
-                                    variables: {
-                                        createChatInput: {isPrivate, name},
-                                    },
-                                });
-                                onClose();
-                            } catch (err) {
-                                setError(UNKNOWN_ERROR_MESSAGE)
-                            }
-                        }}
+                        onClick={handleCreateChat}
                     >
                         Save
                     </Button>

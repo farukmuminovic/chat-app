@@ -11,13 +11,14 @@ import {Chat} from "../../../gql/graphql";
 
 interface ChatListProps {
     chat: Chat;
+    selected: boolean;
 }
 
-const ChatListItem = ({chat}: ChatListProps) => {
+const ChatListItem = ({chat, selected}: ChatListProps) => {
     return (
         <>
             <ListItem alignItems="flex-start" disablePadding>
-                <ListItemButton onClick={() => router.navigate(`/chats/${chat._id}`)}>
+                <ListItemButton onClick={() => router.navigate(`/chats/${chat._id}`)} selected={selected}>
                     <ListItemAvatar>
                         <Avatar alt="Remy Sharp" src="/static/iamages/avatar/1.jpg"/>
                     </ListItemAvatar>
@@ -31,15 +32,15 @@ const ChatListItem = ({chat}: ChatListProps) => {
                                     variant="body2"
                                     color="text.primary"
                                 >
-                                    Ali Connors
+                                    New message
                                 </Typography>
-                                {" — I'll be in your neighborhood doing errands this…"}
+                                {"  - Javi se kad budes mogao, hitno mi trebas..."}
                             </>
                         }
                     />
                 </ListItemButton>
             </ListItem>
-            <Divider variant="inset" component="li"/>
+            <Divider variant="inset" component="li" sx={{backgroundColor: 'darkblue'}}/>
         </>
     )
 }

@@ -1,36 +1,69 @@
-import {useParams} from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 import {useGetChat} from "../../hooks/useGetChat";
-import {Divider, IconButton, InputBase, Paper, Stack} from "@mui/material";
+import {Divider, Grid, IconButton, InputBase, Paper, Stack, Typography} from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {useCreateMessage} from "../../hooks/useCreateMessage";
 import Box from "@mui/material/Box";
 import {useGetMessages} from "../../hooks/useGetMessages";
+import Avatar from "@mui/material/Avatar";
 
 const Chat = () => {
     const params = useParams();
     const [message, setMessage] = useState("");
     const chatId = params._id!;
     const {data} = useGetChat({_id: chatId});
-    const [createMessage] = useCreateMessage();
+    const [createMessage] = useCreateMessage(chatId);
     const {data: messages} = useGetMessages({chatId});
+    const divRef = useRef<HTMLDivElement | null>(null);
+    const location = useLocation();
 
-    const handleKeyDown = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-        if (event.key === 'Enter') {
-            event.preventDefault(); // Prevents the default action of adding a new line
-            await createMessage({
-                variables: {createMessageInput: {content: message, chatId}},
-            });
-        }
-    };
+
+    const scrollToBottom = () => divRef.current?.scrollIntoView();
+
+    useEffect(() => {
+        setMessage("");
+        scrollToBottom();
+    }, [location.pathname, messages]);
+
+    const handleCreateMessage = async () => {
+        await createMessage({
+            variables: {createMessageInput: {content: message, chatId}},
+        });
+        setMessage("")
+    }
 
     return (
         <Stack sx={{height: "100%", justifyContent: "space-between"}}>
             <h1>{data?.chat.name}</h1>
-            <Box>
+            <Box sx={{maxHeight: "70vh", overflow: "auto"}}>
                 {messages?.messages.map((message) => (
-                    <p>{message.content}</p>
+                    <Grid container alignItems="center" marginBottom="1rem">
+                        <Grid item xs={2} lg={1}>
+                            <Avatar src="" sx={{width: 52, height: 52}}/>
+                        </Grid>
+                        <Grid item xs={10} lg={11}>
+                            <Stack>
+                                <Paper
+                                    sx={{
+                                        width: "fit-content",
+                                        backgroundColor: 'darkblue',
+                                        border: 2,
+                                        borderColor: 'lightblue',
+                                        margin: "1rem 0"
+                                    }}>
+                                    <Typography sx={{padding: "0.9rem"}}>
+                                        {message.content}
+                                    </Typography>
+                                </Paper>
+                                <Typography variant="caption" sx={{marginLeft: "0.25rem"}}>
+                                    {new Date(message.createdAt).toLocaleTimeString()}
+                                </Typography>
+                            </Stack>
+                        </Grid>
+                    </Grid>
                 ))}
+                <div ref={divRef}></div>
             </Box>
             <Paper
                 sx={{
@@ -39,6 +72,7 @@ const Chat = () => {
                     justifySelf: "flex-end",
                     alignItems: "center",
                     width: "100%",
+                    margin: "1rem 0"
                 }}
             >
                 <InputBase
@@ -46,15 +80,16 @@ const Chat = () => {
                     onChange={(event) => setMessage(event.target.value)}
                     value={message}
                     placeholder="Message"
-                    onKeyDown={handleKeyDown}
+                    onKeyDown={async (event) => {
+                        if (event.key === 'Enter') {
+                            event.preventDefault();
+                            await handleCreateMessage();
+                        }
+                    }}
                 />
                 <Divider sx={{height: 28, m: 0.5}} orientation="vertical"/>
                 <IconButton
-                    onClick={() => {
-                        createMessage({
-                            variables: {createMessageInput: {content: message, chatId}},
-                        });
-                    }} color="primary" sx={{p: "10px"}}>
+                    onClick={handleCreateMessage} color="primary" sx={{p: "10px"}}>
                     <SendIcon/>
                 </IconButton>
             </Paper>

@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import Box from "@mui/material/Box";
-import customIcon from '../../assets/images/fet-logo.png'
+import customIcon from '../../assets/images/img.png'
 import router from "../Routes";
 
 const Branding = () => {
@@ -25,7 +25,7 @@ const Branding = () => {
                     cursor: 'pointer'
                 }}
             >
-                FET CHAT
+                SKY ANON
             </Typography>
         </>
     )

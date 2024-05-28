@@ -15,6 +15,7 @@ const ChatListHeader = ({handleAddChat}: ChatListHeaderProps) => {
                 <IconButton size="large" edge="start" onClick={handleAddChat}>
                     <AddCircle/>
                 </IconButton>
+                Create new chat
             </Toolbar>
         </AppBar>
     )
