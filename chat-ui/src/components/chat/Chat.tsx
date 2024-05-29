@@ -8,20 +8,22 @@ import Box from "@mui/material/Box";
 import {useGetMessages} from "../../hooks/useGetMessages";
 import Avatar from "@mui/material/Avatar";
 import {useMessageCreated} from "../../hooks/useMessageCreated";
+import {Message} from "../../gql/graphql";
 
 const Chat = () => {
     const params = useParams();
-    const [message, setMessage] = useState("");
     const chatId = params._id!;
     const {data} = useGetChat({_id: chatId});
-    const [createMessage] = useCreateMessage(chatId);
+
+    const [createMessage] = useCreateMessage();
+    const [message, setMessage] = useState("");
     const {data: messages} = useGetMessages({chatId});
+
     const divRef = useRef<HTMLDivElement | null>(null);
     const location = useLocation();
-    const {data: latestMessage} = useMessageCreated({chatId});
-    console.log(latestMessage);
-    
     const scrollToBottom = () => divRef.current?.scrollIntoView();
+
+    useMessageCreated({chatId});
 
     useEffect(() => {
         setMessage("");
@@ -39,32 +41,38 @@ const Chat = () => {
         <Stack sx={{height: "100%", justifyContent: "space-between"}}>
             <h1>{data?.chat.name}</h1>
             <Box sx={{maxHeight: "70vh", overflow: "auto"}}>
-                {messages?.messages.map((message) => (
-                    <Grid container alignItems="center" marginBottom="1rem">
-                        <Grid item xs={2} lg={1}>
-                            <Avatar src="" sx={{width: 52, height: 52}}/>
-                        </Grid>
-                        <Grid item xs={10} lg={11}>
-                            <Stack>
-                                <Paper
-                                    sx={{
-                                        width: "fit-content",
-                                        backgroundColor: 'darkblue',
-                                        border: 2,
-                                        borderColor: 'lightblue',
-                                        margin: "1rem 0"
-                                    }}>
-                                    <Typography sx={{padding: "0.9rem"}}>
-                                        {message.content}
+                {messages &&
+                    [...messages.messages]
+                        .sort(
+                            (messageA, messageB) =>
+                                new Date(messageA.createdAt).getTime() -
+                                new Date(messageB.createdAt).getTime()
+                        ).map((message) => (
+                        <Grid container alignItems="center" marginBottom="1rem">
+                            <Grid item xs={2} lg={1}>
+                                <Avatar src="" sx={{width: 52, height: 52}}/>
+                            </Grid>
+                            <Grid item xs={10} lg={11}>
+                                <Stack>
+                                    <Paper
+                                        sx={{
+                                            width: "fit-content",
+                                            backgroundColor: 'darkblue',
+                                            border: 2,
+                                            borderColor: 'lightblue',
+                                            margin: "1rem 0"
+                                        }}>
+                                        <Typography sx={{padding: "0.9rem"}}>
+                                            {message.content}
+                                        </Typography>
+                                    </Paper>
+                                    <Typography variant="caption" sx={{marginLeft: "0.25rem"}}>
+                                        {new Date(message.createdAt).toLocaleTimeString()}
                                     </Typography>
-                                </Paper>
-                                <Typography variant="caption" sx={{marginLeft: "0.25rem"}}>
-                                    {new Date(message.createdAt).toLocaleTimeString()}
-                                </Typography>
-                            </Stack>
+                                </Stack>
+                            </Grid>
                         </Grid>
-                    </Grid>
-                ))}
+                    ))}
                 <div ref={divRef}></div>
             </Box>
             <Paper
