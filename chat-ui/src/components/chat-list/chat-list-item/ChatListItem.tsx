@@ -32,9 +32,9 @@ const ChatListItem = ({chat, selected}: ChatListProps) => {
                                     variant="body2"
                                     color="text.primary"
                                 >
-                                    New message
+                                    {chat.latestMessage?.user.username || ""}
                                 </Typography>
-                                {"  - Javi se kad budes mogao, hitno mi trebas..."}
+                                {" " + (chat.latestMessage?.content || "")}
                             </>
                         }
                     />
