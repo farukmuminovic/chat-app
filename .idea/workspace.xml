@@ -4,20 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Implemented message and chat aggregations using MongoDB aggregations">
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/cache/latest-message.ts" afterDir="false" />
+    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Implemented UI entities and latest message cache on UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/auth/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/auth/Auth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/auth/SignUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/auth/SignUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/chats/messages/dto/message-created.args.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/chats/messages/dto/message-created.args.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/chats/messages/messages.resolver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/chats/messages/messages.resolver.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/chats/messages/messages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/chats/messages/messages.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/ChatList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/ChatList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-add/ChatListAdd.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-add/ChatListAdd.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-item/ChatListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-item/ChatListItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat/Chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat/Chat.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/src/fragments/chat.fragment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/fragments/chat.fragment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/src/fragments/message.fragment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/fragments/message.fragment.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/gql/gql.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/gql/gql.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/gql/graphql.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/gql/graphql.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/src/hooks/useCreateChat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useCreateChat.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/hooks/useMessageCreated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useMessageCreated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/models/AbstractModel.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/models/User.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,7 @@
       <workItem from="1715533938202" duration="3642000" />
       <workItem from="1716833264866" duration="10535000" />
       <workItem from="1716921756030" duration="20784000" />
-      <workItem from="1717529890517" duration="5884000" />
+      <workItem from="1717529890517" duration="8962000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI">
       <option name="closed" value="true" />
@@ -299,7 +297,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717531756252</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Implemented UI entities and latest message cache on UI">
+      <option name="closed" value="true" />
+      <created>1718470648512</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1718470648512</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +340,20 @@
     <MESSAGE value="Implemented message subscriptions on backend and UI" />
     <MESSAGE value="Implemented subscriptions auth and guard to allow user to subscribe only to messages that are public or associated with that user&#10;Implemented messages cache and sorting messages by time on UI" />
     <MESSAGE value="Implemented message and chat aggregations using MongoDB aggregations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented message and chat aggregations using MongoDB aggregations" />
+    <MESSAGE value="Implemented UI entities and latest message cache on UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented UI entities and latest message cache on UI" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/chat-backend/src/chats/messages/messages.service.ts</url>
+          <line>68</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

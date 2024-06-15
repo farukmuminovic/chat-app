@@ -7,8 +7,6 @@ import {useCreateMessage} from "../../hooks/useCreateMessage";
 import Box from "@mui/material/Box";
 import {useGetMessages} from "../../hooks/useGetMessages";
 import Avatar from "@mui/material/Avatar";
-import {useMessageCreated} from "../../hooks/useMessageCreated";
-import {Message} from "../../gql/graphql";
 
 const Chat = () => {
     const params = useParams();
@@ -22,8 +20,6 @@ const Chat = () => {
     const divRef = useRef<HTMLDivElement | null>(null);
     const location = useLocation();
     const scrollToBottom = () => divRef.current?.scrollIntoView();
-
-    useMessageCreated({chatId});
 
     useEffect(() => {
         setMessage("");
