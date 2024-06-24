@@ -4,26 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Implemented chat and messages pagination, style for rendering long messages on latest message chat list">
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/common/s3/file-upload-options.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/common/s3/s3.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/common/s3/s3.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/common/s3/s3.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/users.constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/users.controller.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/users.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-ui/src/components/profile/Profile.tsx" afterDir="false" />
+    <list default="true" id="048e0445-cb48-4738-9605-883599fe61d0" name="Changes" comment="Implemented uploading profile images to S3 bucket using multer and aws-sdk s3 client">
+      <change afterPath="$PROJECT_DIR$/chat-backend/src/users/entities/user.document.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-ui/src/fragments/user.fragment.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-backend/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-backend/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/auth/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-backend/src/auth/token-payload.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/auth/token-payload.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/chats/chats.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/chats/chats.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/chats/chats.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/chats/chats.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/chats/messages/messages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/chats/messages/messages.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/common/s3/s3.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/common/s3/s3.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/users/entities/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/entities/user.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/users/users.constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/users.constants.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-backend/src/users/users.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/users.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/users/users.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/users.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-backend/src/users/users.resolver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/users.resolver.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-backend/src/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-backend/src/users/users.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/Routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/Routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-item/ChatListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat-list/chat-list-item/ChatListItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/components/chat/Chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/chat/Chat.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/components/header/Settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/header/Settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/components/profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/components/profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-ui/src/fragments/message.fragment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/fragments/message.fragment.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/gql/gql.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/gql/gql.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/gql/graphql.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/gql/graphql.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-ui/src/hooks/useGetMe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/chat-ui/src/hooks/useGetMe.ts" afterDir="false" />
@@ -43,7 +44,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_COMMON_BRANCH" value="debug" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/chat-backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -123,7 +124,7 @@
       <workItem from="1716833264866" duration="10535000" />
       <workItem from="1716921756030" duration="20784000" />
       <workItem from="1717529890517" duration="17518000" />
-      <workItem from="1719250979832" duration="6995000" />
+      <workItem from="1719250979832" duration="10520000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented NestJS connection to localhost MongoDB and GraphQL server&#10;Refactored project structure to separate backend from UI">
       <option name="closed" value="true" />
@@ -333,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718670147409</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Implemented uploading profile images to S3 bucket using multer and aws-sdk s3 client">
+      <option name="closed" value="true" />
+      <created>1719258817200</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1719258817200</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +354,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactored project structure to separate backend from UI" />
     <MESSAGE value="IDEA workspace" />
     <MESSAGE value="Implemented abstract repository and entity as well as CRUD functionalities for User object" />
     <MESSAGE value="Added validation of email and password strength, implemented logging with nestjs-pino" />
@@ -370,14 +378,15 @@
     <MESSAGE value="Implemented UI entities and latest message cache on UI" />
     <MESSAGE value="Implemented multiple message subscriptions and sorting chats by newest messages" />
     <MESSAGE value="Implemented chat and messages pagination, style for rendering long messages on latest message chat list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented chat and messages pagination, style for rendering long messages on latest message chat list" />
+    <MESSAGE value="Implemented uploading profile images to S3 bucket using multer and aws-sdk s3 client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented uploading profile images to S3 bucket using multer and aws-sdk s3 client" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/chat-backend/src/chats/messages/messages.service.ts</url>
-          <line>81</line>
+          <line>84</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
