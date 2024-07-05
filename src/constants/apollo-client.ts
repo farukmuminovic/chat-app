@@ -6,6 +6,8 @@ import {onLogout} from "../utils/logout";
 import {getMainDefinition} from "@apollo/client/utilities";
 import {GraphQLWsLink} from "@apollo/client/link/subscriptions";
 import {createClient} from "graphql-ws";
+import {setContext} from "@apollo/client/link/context";
+import {getToken} from "../utils/token";
 
 const logoutLink = onError((error) => {
     if (error.graphQLErrors?.length && (error.graphQLErrors[0].extensions?.originalError as any)?.statusCode === 401) {
@@ -16,11 +18,23 @@ const logoutLink = onError((error) => {
     }
 });
 
+const authLink = setContext((_, {headers}) => {
+    return {
+        headers: {
+            ...headers,
+            authorization: getToken(),
+        },
+    };
+});
+
 const httpLink = new HttpLink({uri: `${API_URL}/graphql`})
 
 const wsLink = new GraphQLWsLink(
     createClient({
-        url: `ws://${WS_URL}/graphql`,
+        url: `${WS_URL}/graphql`,
+        connectionParams: {
+            token: getToken(),
+        },
     })
 );
 
@@ -53,7 +67,7 @@ const client = new ApolloClient({
             },
         },
     }),
-    link: logoutLink.concat(splitLink)
+    link: logoutLink.concat(authLink).concat(splitLink),
 });
 
 function merge(existing: any, incoming: any, {args}: any) {
