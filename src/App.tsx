@@ -23,7 +23,8 @@ const darkTheme = createTheme({
 const App = () => {
     const {path} = usePath();
     const showChatList = path === "/" || path.includes("chats");
-
+    console.log('API URL:', process.env.REACT_APP_API_URL);
+    console.log('WebSocket URL:', process.env.REACT_APP_WS_URL);
     return (
         <ApolloProvider client={client}>
             <ThemeProvider theme={darkTheme}>
